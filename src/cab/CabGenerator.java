@@ -31,7 +31,11 @@ public class CabGenerator {
         }
 
         double totalFare = calculateTotalFare(rides);
-        System.out.printf("Total fare for %d rides: Rs. %.2f\n", numRides, totalFare);
+        double avgFarePerRide = calculateAvgFarePerRide(totalFare, numRides);
+
+        System.out.printf("Total number of rides: %d\n", numRides);
+        System.out.printf("Total fare: Rs. %.2f\n", totalFare);
+        System.out.printf("Average fare per ride: Rs. %.2f\n", avgFarePerRide);
 
         scanner.close();
     }
@@ -44,6 +48,14 @@ public class CabGenerator {
         }
 
         return totalFare;
+    }
+
+    public static double calculateAvgFarePerRide(double totalFare, int numRides) {
+        if (numRides == 0) {
+            return 0.0;
+        } else {
+            return totalFare / numRides;
+        }
     }
 
     public static double calculateFare(double distance, double time) {
@@ -61,3 +73,4 @@ public class CabGenerator {
         }
     }
 }
+
