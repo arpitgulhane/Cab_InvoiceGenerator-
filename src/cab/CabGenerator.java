@@ -19,7 +19,6 @@ public class CabGenerator {
             double fare = calculateFare(distance, time);
             System.out.printf("Total fare: Rs. %.2f\n", fare);
 
-            scanner.close();
         }
 
         public static double calculateFare(double distance, double time) {
