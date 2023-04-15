@@ -96,6 +96,7 @@ public class CabGenerator {
         NORMAL, PREMIUM
     }
 
+    //-------------Class Ride
     public static class Ride {
         public final double distance;
         public final double time;
@@ -107,6 +108,8 @@ public class CabGenerator {
             this.type = type;
         }
     }
+
+    //-------------Class RideRepository
 
     public static class RideRepository {
         private final List<Ride> rides;
